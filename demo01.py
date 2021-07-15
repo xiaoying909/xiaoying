@@ -19,5 +19,6 @@ print("inpurt获取的值",len(a+b))
 #数据格式的转换
 # type(数据) 
 print(2241)
+3333
 
 
