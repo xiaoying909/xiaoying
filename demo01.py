@@ -17,6 +17,7 @@ a = str(input("请输入："))
 b = str(input("请输入："))
 print("inpurt获取的值",len(a+b))
 #数据格式的转换
-# type(数据)   查询数据格式
+# type(数据) 
+print(2241)
 
 
