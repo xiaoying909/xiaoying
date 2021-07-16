@@ -86,13 +86,20 @@ python的语法
 # #   数组和字典的删除
 # del a["name"]
 # print(a)
-"""
+""""
 练习：
 获取用户的个人信息，并存储到字典中。
 个人信息包括，name,age,sex
-"""
+
+方法1:
 a = str(input("请输入name："))
 b = str(input("请输入age："))
 c = str(input("请输入sex："))
 d ={"name":a,"age":b,"sex":c}
 print(d)
+
+改进版：
+a = {"name":input("请输入:"),"age":input("请输入:"),"sex":input("请输入：")}
+print(a)
+"""
+
