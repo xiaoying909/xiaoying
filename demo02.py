@@ -67,7 +67,49 @@
 # # print(b)
 # for i in range(10):
 #      print(i)
-for i in range(1,10):
-     for j in range(1,i+1):
-         print(i,"X",j,"=",i*j,end="  ")
-     print()
+# for i in range(1,10):
+#      for j in range(1,i+1):
+#          print(i,"X",j,"=",i*j,end="  ")
+#      print()
+# for i in range(10):
+#      if i == 4:
+#       continue
+#      print(i)
+
+#方法/函数 
+
+def checkname(username):
+     """
+     自动的判断账号的长度是5-8位，并且账号是小写     
+     """
+     if len(username) >=5 and len(username) <=8:
+        if username[0] in "qazwsxedcrfvtgbyhnujmiklop":
+          print()
+        else:
+          print("账号的首字母必须小写字母开头")
+     else:
+      print("账号不符合规范")
+# def 方法的声明
+# checkname 方法的名字
+# username  方法的参数
+#""""方法的说明""""
+# 方法的逻辑代码
+def jiafa(a,b):
+     """
+     方法的作用是数字相加
+     """
+     if type(a) is int and type(b) is int:# typy()   查询数据类似    is   和某个数据类型一样
+         return a+b
+     else:
+          return "输入的数据类型不正确"
+"""
+返回值，返回后我们可以对这个值进行其他操作
+而，print不行
+"""
+# try:
+#     print(1+"a")
+# except Exception as e:
+#      print("上面代码错了",e)
+#异常类 包>类>方法>变量
+username=input("请输入:")
+print(checkname)

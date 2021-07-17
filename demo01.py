@@ -103,3 +103,9 @@ a = {"name":input("请输入:"),"age":input("请输入:"),"sex":input("请输入
 print(a)
 """
 
+
+
+
+
+
+
