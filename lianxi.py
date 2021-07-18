@@ -113,15 +113,34 @@
 练习：
 定义一个方法判断用户输入的方法是否符合规范
 """
-input("请输入：")
-def xy(name,password):
-    if len(name) >=6 and len(name) <=9:
-        if len(password) >= 7 and len(password):
-                print("注册成功") 
+# def xy(name,password):
+#     if len(name) >=6 and len(name) <=9:
+#         if len(password) >= 7 and len(password):
+#                 print("注册成功") 
+#         else:
+#                 print("密码不规范")
+#     else:
+#         print("账号不规范")
+# name=input("请输入账号:")
+# password=input("请输入密码")
+# print(xy(name,password))
+
+#老师的代码
+def checkname(username,password):
+     """
+     自动的判断账号的长度是5-8位，并且账号是小写     
+     """
+     if len(username) >=5 and len(username) <=8:
+        if username[0] in "qazwsxedcrfvtgbyhnujmiklop":
+            if len(password) >= 8 and len(password) <=16:
+                
+              return True
+            else :
+                return "密码不符合规范"
         else:
-                print("密码不规范")
-    else:
-        print("账号不规范")
-name=input("请输入账号:")
-password=input("请输入密码")
-print(xy(name,password))
+          return "账号的首字母必须小写字母开头"
+     else:
+      return "账号不符合规范"
+username = input("请输入账号：")
+password = input("请输入密码")
+print(checkname(username,password))
