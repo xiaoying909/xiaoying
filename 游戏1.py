@@ -14,5 +14,5 @@ while True:
         print("奖励你一口 mua~")
         break
     else:
-        print("不对喔，我想的是520！")
+        print()
 print("游戏结束！")  
