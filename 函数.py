@@ -92,10 +92,10 @@ def factorial(n):    #普通的定义方法,利用for循环进行数值换算
     for i in range(1,n):
         result *= i          #这是局部变量   result
     return result   
-number = int(input("请输入数字："))
-result = factorial(number)    #这是全局变量  result
-print(result,"是",number,"的阶乘")       #直接输出
-print("%d是%d的阶乘"%(result,number))    #制定函数的位置用%d   可以在后面对%d进行指定参数
+#number = int(input("请输入数字："))
+#result = factorial(number)    #这是全局变量  result
+#print(result,"是",number,"的阶乘")       #直接输出
+#print("%d是%d的阶乘"%(result,number))    #制定函数的位置用%d   可以在后面对%d进行指定参数
 
 def factorial2(n):      #递归定义方法    一定要注意结束值！！！！！！   1.调用自身   2.正确的返回值
     '递归的阶乘方法'
@@ -103,5 +103,37 @@ def factorial2(n):      #递归定义方法    一定要注意结束值！！！
         return 1
     else:
         return n * factorial2(n-1)      #一直循环   例如   6*(5*(4*(3*(2*1))))   
-number2 = int(input("请输入一个正整数："))
-print(factorial2(number2))
+#number2 = int(input("请输入一个正整数："))
+#print(factorial2(number2))
+def fab(n):
+    '斐波那契函数的实现'   # F(n) =  n=1  1    n=2   2    n>2   F(n-1)+F(n-2)   
+    n1=1
+    n2=1
+    n3=1
+    if n < 1 :
+        print("输入有误！")
+        return  -1
+    while (n-2)>0:
+        n3 = n2 +n1
+        n1 = n2
+        n2 = n3
+        n -=1
+    return n3
+print(fab(2))
+def hanns(n,x,y,z):
+    '汉诺斯函数构造'
+    if n == 1:
+        print(x,"-->",z)
+    else:
+        hanns(n-1,x,z,y)#将 n-1个盒子从x移动到y上
+        print(x,"-->",z) #将最底下的最后一个盒子从x移动到z上
+        hanns(n-1,y,x,z)#将y上的n-1个盒子移动到z上
+# n = int(input("请输入汉诺斯的层数："))
+# hanns(n,'X','Y','Z')
+def nianling(n):
+    if n ==1:
+        return 10
+    else:   
+        return nianling(n-1) + 2
+su = int(input("请输入："))
+print(nianling(su))
