@@ -102,8 +102,10 @@ print(d)
 a = {"name":input("请输入:"),"age":input("请输入:"),"sex":input("请输入：")}
 print(a)
 """
-小影 = 588
-print(小影)
+
+
+
+
 
 
 
